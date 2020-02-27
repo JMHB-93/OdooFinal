@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="floristeria_flores_action" name="flores" res_model="floristeria.flores" />
+		  
+
+        <record id="floristeria_flores_view_tree" model="ir.ui.view">
+            <field name="name">Lista flores</field>
+            <field name="model">flores</field>
+            <field name="arch" type="xml">
+		<tree>
+                    <field name="codigo" />
+                        <field name="nombreComun" />
+						<field name="nombreCientifico" />
+						<field name="especie" />
+						<field name="genero" />
+                        <field name="precio" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="floristeria_flores_view_form" model="ir.ui.view">
+            <field name="name">Formulario de flores</field>
+            <field name="model">flores</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                        <field name="nombreComun" />
+						<field name="nombreCientifico" />
+						<field name="especie" />
+						<field name="genero" />
+                        <field name="precio" />
+		        
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="floristeria_flores_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de flores</field>
+            <field name="model">flores</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                        <field name="nombreComun" />
+						<field name="nombreCientifico" />
+						<field name="especie" />
+						<field name="genero" />
+                        <field name="precio" />
+                </search>
+            </field>
+        </record>
+		<menuitem name="Floristería" id="menu_floristeria" sequence="10" />
+        <menuitem name="Personas" id="menu_personas" parent="menu_floristeria" sequence="10"/>
+        <menuitem name="Lugares" id="menu_lugares" parent="menu_floristeria" sequence="10"/>
+        <menuitem name="Flores" id="menu_flores" action="floristeria_flores_action" parent="menu_flores" sequence="10"/>
+    </data>
+</odoo>

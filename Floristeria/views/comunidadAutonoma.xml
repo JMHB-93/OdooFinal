@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="floristeria_comunidad_autonoma_action" name="comunidad_autonoma" res_model="floristeria.comunidad_autonoma" />
+
+        <record id="floristeria_comunidad_autonoma_view_tree" model="ir.ui.view">
+            <field name="name">Lista de comunidades autónomas</field>
+            <field name="model">floristeria.comunidadAutonoma</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    
+                </tree>
+            </field>
+        </record>
+
+        <record id="floristeria_comunidad_autonoma_view_search" model="ir.ui.view">
+            <field name="name">Lista de comunidades autónomas</field>
+            <field name="model">floristeria.comunidadAutonoma</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Comunidad autónoma" id="menu_comunidad_autonoma" action="floristeria_comunidad_autonoma_action" parent="menu_lugares" sequence="10"/>
+    </data>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="floristeria_dueno_action" name="dueno" res_model="floristeria.dueno" />
+
+        <record id="floristeria_dueno_view_tree" model="ir.ui.view">
+            <field name="name">Dueños</field>
+            <field name="model">floristeria.dueno</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="edad" />
+					<field name="telefono" />
+                    <field name="email" />
+                </tree>
+            </field>
+        </record>
+		
+		<record id="floristeria_proveedores_view_form" model="ir.ui.view">
+            <field name="name">Formulario de dueño</field>
+            <field name="model">floristeria.proveedores</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                    	<field name="nombre" />
+                    	<field name="nombreRep" />
+		    	<field name="telefono" />
+		    	<field name="diasVisita" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="floristeria_dueno_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de dueños</field>
+            <field name="model">floristeria.dueno</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="edad" />
+					<field name="telefono" />
+                    <field name="email" />
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Dueño" id="menu_dueno" action="floristeria_dueno_action" parent="menu_personas" sequence="10"/>
+    </data>
+</odoo>
